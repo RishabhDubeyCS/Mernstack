@@ -1,8 +1,6 @@
-const calculater = require('./math.js');
+const info = require('./fruits.js');
 
-console.log(calculater.sum(1, 2));
-
-
+console.log(info);
 
 
 
