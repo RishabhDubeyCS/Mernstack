@@ -1,0 +1,25 @@
+Node.js
+Javascript Runtime eviroment 
+It is used for server side programming 
+ *node.js is not a language , library or  framework
+
+
+node REPL (Read Eval Print Loop)
+node -v
+node -h
+
+Node files
+node filename.js
+ 
+ Process 
+ 
+ Process : This object provides infomation about , and control over the current Node.js process.
+ Process.argv: returns an array containing the command line arguments passed when the Node.js process was launched. 
+  console .log (process.argv);
+
+
+  Important:
+   Module.exports
+   require files 
+   requrie () function
+    module.exports a special object 
