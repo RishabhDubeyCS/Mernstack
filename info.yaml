@@ -1,0 +1,152 @@
+Node.js
+Javascript Runtime eviroment 
+It is used for server side programming 
+ *node.js is not a language , library or  framework
+
+
+node REPL (Read Eval Print Loop)
+node -v
+node -h
+
+Node files
+node filename.js
+ 
+ Process 
+ 
+ Process : This object provides infomation about , and control over the current Node.js process.
+ Process.argv: returns an array containing the command line arguments passed when the Node.js process was launched. 
+  console .log (process.argv);
+
+
+  Important:
+   Module.exports
+    1 require files 
+     requrie () function
+  module.exports a special object 
+
+  
+   2 concept second is requring directory
+  require() function
+    module.exports a special object 
+
+  
+
+
+script.js
+const math= require("./math")
+console.log (math.sum (2,3));
+console.log (math.pi);
+......................................
+math.js file 
+const sum = (a, b) =>a+b;
+const mul  = (a, b) =>a+b;
+const g = 9.8;
+const pi = 3.14;
+module.exports= {
+     sum :sum ,
+      mul: mul , 
+       g : g, 
+       pi : pi,
+
+};
+...............................
+module.exports.sum = (a, b) =>a+b;
+module.exports.mul  = (a, b) =>a+b;
+module.exports.g = 9.8;
+module.exports.pi = 3.14;
+/*module.exports= {
+     sum :sum ,
+      mul: mul , 
+       g : g, 
+       pi : pi,
+
+};*/
+...............................
+//make a folder fruit********
+//apple.js file 
+module.exports ={
+     name : "apple",
+      color : "red",
+
+};
+//banana.js file 
+module.exports ={
+    name : "Banana",
+     color : "Yellow ",
+
+};
+ //orange.js file
+module.exports ={
+    name : "Orange",
+     color : "orange color  ",
+
+};
+
+//index.js file  
+ const apple = require ("./apple");
+const banana = require ("./banana");
+const orange = require ("./orange");
+ let fruit = [apple, banana, orange];
+  module.exports = fruit;
+.........................................................
+  //script.js file
+  const info = require("./fruit");
+console.log (info[0] );
+const info = require("./fruit");
+console.log (info );
+const info = require("./fruit");
+console.log (info[0].name ); 
+..............................................
+
+
+
+
+create foldre of figlet 
+install the package of figlet  write the command install npm figlet
+inside of the figlet create index.js than write a code 
+ ..............................index.js file ..........................................................
+ const figlet =require("figlet");
+figlet("Rishabh dubey !!", function (err, data) {
+    if (err) {
+      console.log("Something went wrong...");
+      console.dir(err);
+      return;
+    }
+    console.log(data);
+  });
+  ...........................................................
+  Create new folder Myproject create our own package.json
+  write a command "npm init" fill the information 
+
+  Inside of the Myproject  file have create this type of discription create 
+  {
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "This is my first project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rishabh Dubey",
+  "license": "ISC"
+}
+
+............................................................................
+install the npm give-me-a-joke package 
+than the dependance with be change  see here
+
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "This is my first project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rishabh Dubey",
+  "license": "ISC",
+  "dependencies": {
+    "figlet": "^1.8.0",
+    "give-me-a-joke": "^0.5.1"  add this package  and everything are same no change 
+  }
+}
