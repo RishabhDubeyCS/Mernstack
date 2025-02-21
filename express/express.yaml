@@ -1,0 +1,111 @@
+const express =require ("express");
+     const app= express();//app are the object 
+     console.dir(app);
+let port = 8080;
+ app.listen (port, ()=>{
+     console.log (`app is listening on port ${port}`);
+ });
+ 
+ app.use ((req, res )=>{
+     console.log ("request recived");
+     });
+     ......................................................................
+     const express =require ("express");
+     const app= express();//app are the object 
+     console.dir(app);
+let port = 8080;
+ app.listen (port, ()=>{
+     console.log (`app is listening on port ${port}`);
+ });
+
+ app.use ((req, res )=>{
+     console.log ("request recived");
+      res.send("hello this is basic response");
+     });
+     .......................................................................
+     const express =require ("express");
+     const app= express();//app are the object 
+     console.dir(app);
+let port = 8080;
+ app.listen (port, ()=>{
+     console.log (`app is listening on port ${port}`);
+ });
+
+ app.use ((req,res)=>{
+     console.log ("request recived");
+      res.send({    //response me ik object jaygi 
+        name : "Rishabh dubey ",
+         color: "red",
+         University:"Sage Universtiy Bhopal",
+         age:18,
+      });
+     });
+...................................................................
+//we can send the html tag in sever
+
+const express =require ("express");
+     const app= express();//app are the object 
+     console.dir(app);
+let port = 8080;
+ app.listen (port, ()=>{
+     console.log (`app is listening on port ${port}`);
+ });
+
+ app.use ((req,res)=>{
+     console.log ("request recived");
+      let code = "<h1>fruits</h1 <ul > apple </ul>  <ul > orange </ul>";
+      res.send(code );
+     });
+.................................................................................
+//we can send the html tag in sever
+
+const express =require ("express");
+     const app= express();//app are the object 
+     console.dir(app);
+let port = 8080;
+ app.listen (port, ()=>{
+     console.log (`app is listening on port ${port}`);
+ });
+  app.get("/", (req, res )=>{
+     res.send ("you contacted root path ")
+  });
+  app.get ("/search",(req, res)=>
+{
+   res.send ("you contacted search path");  
+});
+ app.get("/help", (req , res )=>
+{
+     res.send("you contacted help path")
+});
+ app.get ("*", (req, res )=>{
+     res.send ("This path does not exist")
+ });
+.....................................................................
+
+
+//we can send the html tag in sever
+
+const express =require ("express");
+     const app= express();//app are the object 
+     console.dir(app);
+let port = 8080;
+ app.listen (port, ()=>{
+     console.log (`app is listening on port ${port}`);
+ });
+
+ app.get("/", (req, res)=>{
+      res.send ("Hello , i am root");
+ });
+  app.get("/:username/:id ", (req, res)=>{
+     console.log (req.params);
+      res.send ("hello , i am root");
+  });
+app.get("/:username/:id ", (req, res)=>{
+   let {username,id }= req.params;
+    res.send (`hello , i am root @${username}`);
+});
+
+
+
+
+    //   

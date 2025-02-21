@@ -6,3 +6,18 @@
 // }
 // newFunction();
 // 
+............................................................................................
+script.js 
+const calculater = require('./math.js');
+
+console.log(calculater.sum(1, 2));
+console.log (calculater.mul(5, 2));
+console.log(calculater.Pi);
+.....................................................................................
+math.js
+
+const sum =(a,b )=>a+b;
+ const mul =(a,b )=>a*b;
+ const Pi = 3.14;
+
+ module.exports = {sum,mul,Pi};

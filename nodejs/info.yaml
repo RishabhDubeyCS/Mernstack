@@ -20,6 +20,13 @@ node filename.js
 
   Important:
    Module.exports
-   require files 
-   requrie () function
+    1 require files 
+     requrie () function
+  module.exports a special object 
+
+  
+   2 concept second is requring directory
+  require() function
     module.exports a special object 
+
+  
