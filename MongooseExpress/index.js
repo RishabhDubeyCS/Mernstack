@@ -11,7 +11,7 @@ const express =require ("express");
     .catch(err => console.log(err));
     
     async function main() {
-        await mongoose.connect('mongodb://127.0.0.1:27017/whatapp');.
+        await mongoose.connect('mongodb://127.0.0.1:27017/whatapp');
       
       }
 
@@ -48,6 +48,7 @@ let newChat = new Chat ({
   
     
 });
+
 //saving the new chat to the database
  
 //................................................
@@ -60,7 +61,7 @@ app.get("/chats/login", (req, res) => {
 
 
       app.get("/", (req, res)=>{
-        res.send("Root is working ");
+        res.send("Root is working "); .
       });
 
 
